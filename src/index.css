@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine;
+};
+html {
+  scroll-behavior: smooth;
+}
+*{
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  
+}
+@keyframes glitch {
+  0% { text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9; transform: translate(0); }
+  20% { text-shadow: -2px 0 #ff00c1, 2px 0 #00fff9; transform: translate(-2px, 2px); }
+  40% { text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9; transform: translate(-2px, -2px); }
+  60% { text-shadow: -2px 0 #ff00c1, 2px 0 #00fff9; transform: translate(2px, 2px); }
+  80% { text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9; transform: translate(2px, -2px); }
+  100% { text-shadow: none; transform: translate(0); }
+}
+
+.animate-glitch {
+  animation: glitch 0.4s cubic-bezier(.25, .46, .45, .94) both;
+}
